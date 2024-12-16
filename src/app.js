@@ -27,6 +27,7 @@ app.use(express.static(publicPath));
 hbs.registerPartials(partialPath);
 
 app.use("/", require("../router/userRouter"));
+app.use("/", require("../router/adminRouter"));
 
 app.listen(PORT, () => {
   console.log(`server running on ${PORT}`);
